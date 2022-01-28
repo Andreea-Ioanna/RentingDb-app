@@ -1,12 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\ApplyformController;
-use App\Http\Controllers\SignupController;
-use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,22 +13,12 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', function()
-{
-    return view('users.user', ['name' => 'James']);
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/user/{id}', [TestController::class, 'showProfile']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-Route::get('/andreea', [TestController::class, 'testProfile']);
-
-Route::get('/home', [HomeController::class, 'home']);
-
-Route::get('/dashboard', [DashboardController::class, 'dashboard']);
-
-Route::get('/applyform', [ApplyFormController::class, 'applyform']);
-
-Route::get('/signup', [SignupController::class, 'signup']);
-
-Route::get('/login', [LoginController::class, 'login']);
-
+require __DIR__.'/auth.php';
