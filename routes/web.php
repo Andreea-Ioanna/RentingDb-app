@@ -38,4 +38,3 @@ Route::get('/signup', [SignupController::class, 'signup']);
 
 Route::get('/login', [LoginController::class, 'login']);
 
-
