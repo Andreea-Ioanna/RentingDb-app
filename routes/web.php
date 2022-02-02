@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PropertyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +29,8 @@ Route::get('/dashboard', function () {
 Route::get('/profile', function () {
     return view('profile');
 })->middleware(['auth'])->name('profile');
+
+Route::post('/addProperty', [PropertyController::class, 'addProperty'])
+    ->middleware('auth');
 
 require __DIR__.'/auth.php';
