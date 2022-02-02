@@ -5481,13 +5481,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
-window.showPage = function (pageId) {
-  document.querySelectorAll('.subpage').forEach(function (item) {
-    item.style.display = "none";
-  });
-  document.getElementById(pageId).style.display = "block";
-};
-
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

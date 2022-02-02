@@ -1,5 +1,4 @@
-
-<x-app-layout>
+<x-home>
 
     <div id="landing_page" class="subpage">
         <div class="border_bottom"></div>
@@ -67,4 +66,4 @@
 
 
     
-</x-app-layout>
+    </x-home>
