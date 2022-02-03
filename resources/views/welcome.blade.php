@@ -50,6 +50,7 @@
                 <div class="">
                     <p>Property id: {{ $property->id }}</p>
                     <p>Property description: {{ $property->description }}</p>
+                    <p>Property price: {{ $property->price }}</p>
                     <p><a class="nav_btn1" style="color:black" href="{{ route('property',$property->id ) }}">View property</a></p>
                 </div>
                 <br>

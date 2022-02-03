@@ -9,6 +9,7 @@
     <div>
         <p>Property id: {{ $property->id }}</p>
         <p>Property description: {{ $property->description }}</p>
+        <p>Property price: {{ $property->price }}</p>
         <p><a class="nav_btn1" style="color:black" href="{{ route('edit-property',$property->id) }}">Edit property</a></p>
         <p><a class="nav_btn1" style="color:black" href="{{ route('property',$property->id ) }}">View property</a></p>
     </div>

@@ -13,7 +13,10 @@ class Photos extends Model
      */
     protected $table = 'photos';
     protected $fillable = [
-        'propertyId','url','createdAt','updatedAt' 
+        'propertyId',
+        'url',
+        'createdAt',
+        'updatedAt' 
      ];
     const CREATED_AT = 'createdAt';
     const UPDATED_AT = 'updatedAt';

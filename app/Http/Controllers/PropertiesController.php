@@ -24,6 +24,7 @@ class PropertiesController extends Controller
      */
     public function createProperty(Request $request)
     {
+        //add property
         $property = Properties::create([
             'userId' => Auth::user()->id,
             'description' => $request->description,
@@ -47,11 +48,13 @@ class PropertiesController extends Controller
 
     public function myProperties()
     {
+        //list only properties of the authenticated user.
         $properties = Properties::where('userId',Auth::user()->id)->get();
         return view('landlord.my-properties')->with('properties', $properties);
     }
 
     public function viewProperty($id){
+        //view property as Guest (auth not needed)
         return view('property', [
             'property' => Properties::findOrFail($id)
         ]);
@@ -59,6 +62,7 @@ class PropertiesController extends Controller
 
     public function editProperty($id)
     {
+        //edit property (only auth users), also only the property that belongs to the auth user.
         $property = Properties::where('userId',Auth::user()->id)->where('id',$id)->first();
             return view('landlord.edit-property', [
                 'property' => $property
@@ -67,12 +71,14 @@ class PropertiesController extends Controller
 
     public function updateProperty(Request $request, Properties $property)
     {
+        //update property
         $property->update($request->all());
         return redirect()->action([PropertiesController::class, 'myProperties']);
 
     }
 
     public function allProperties(){
+        //properties from welcome
         return view('welcome', [
             'properties' => Properties::where('active',1)->get()
         ]);
