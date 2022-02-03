@@ -1,4 +1,4 @@
-<x-home>
+<x-guest-layout>
 
     <div id="landing_page" class="subpage">
         <div class="border_bottom"></div>
@@ -66,4 +66,4 @@
 
 
     
-    </x-home>
+    </x-guest-layout>

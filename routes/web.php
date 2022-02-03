@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\PropertiesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {   
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -30,7 +30,16 @@ Route::get('/profile', function () {
     return view('profile');
 })->middleware(['auth'])->name('profile');
 
-Route::post('/addProperty', [PropertyController::class, 'addProperty'])
-    ->middleware('auth');
+Route::get('/add-property', function () {
+    return view('landlord.add-property');
+})->middleware(['auth'])->name('landlord.add-property');
 
-require __DIR__.'/auth.php';
+Route::get('/edit-property', function () {
+    return view('landlord.edit-property');
+})->middleware(['auth'])->name('landlord.edit-property');
+
+Route::get('/my-properties', function () {
+    return view('landlord.my-properties');
+})->middleware(['auth'])->name('landlord.my-properties');
+
+require __DIR__ . '/auth.php';
