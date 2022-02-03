@@ -83,4 +83,10 @@ class PropertiesController extends Controller
             'properties' => Properties::where('active',1)->get()
         ]);
     }
+    public function allPropertiesDashboard(){
+        //properties from welcome
+        return view('dashboard', [
+            'properties' => Properties::where('active',1)->get()
+        ]);
+    }
 }

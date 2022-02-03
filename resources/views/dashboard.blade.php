@@ -90,20 +90,20 @@
             </div>
         </div>
     </div>
-    <!-- <div class="properties_container">
-                @foreach ($properties1 as $property)
+    <div class="properties_container">
+    @foreach ($properties as $property)
 
-                <div class="property_template">
-                    <img class="property_image" src="/assets/img.jpg">
-                    <p class="property_id">Property id: {{ $property->id }}</p>
-                    <p class="price">{{ $property->price }} kr.-</p>
-                    <p>{{ $property->description }}</p>
-                    <p>{{ $property->area }}</p>
-                    <p>{{ $property->address }}</p>
-                    <p><a class="nav_btn1" style="color:black" href="{{ route('property',$property->id ) }}">View property</a></p>
+<div class="property_template">
+    <img class="property_image" src="/assets/img.jpg">
+    <p class="property_id">Property id: {{ $property->id }}</p>
+    <p class="price">{{ $property->price }} kr.-</p>
+    <p>{{ $property->description }}</p>
+    <p>{{ $property->area }}</p>
+    <p>{{ $property->address }}</p>
+    <p><a class="nav_btn1" style="color:black" href="{{ route('property',$property->id ) }}">View property</a></p>
+</div>
+
+
+@endforeach
                 </div>
-               
-
-                @endforeach
-                </div> -->
 </x-app-layout>

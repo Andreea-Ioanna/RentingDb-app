@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PropertiesController;
+use App\Http\Controllers\TenantController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,13 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PropertiesController::class, 'allProperties']);
 
+Route::get('/dashboard', [PropertiesController::class, 'allPropertiesDashboard'])
+    ->middleware(['auth'])->name('dashboard');
+
 Route::get('/profile', function () {
     return view('profile');
 })->name('profile');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
 Route::get('/profile', function () {
     return view('profile');
@@ -47,6 +47,12 @@ Route::get('/my-properties', [PropertiesController::class, 'myProperties'])
 
 Route::get('/property/{id}', [PropertiesController::class, 'viewProperty'])
     ->name('property');
+
+Route::get('/tenant/{id}', [TenantController::class, 'viewForm'])
+    ->name('tenant');
+
+Route::post('/tenant-application/{propertyId}', [TenantController::class, 'createForm'])
+    ->name('tenant-application');
 
 
 

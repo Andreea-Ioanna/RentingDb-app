@@ -112,7 +112,7 @@
         <p class="monthly_price">Monthly price</p>
         <p class="price">6,300 kr</p>
         <p>Available: 26/12/2021</p>
-        <button class="nav_btn2 apply_rent">Apply for rent</button>
+        <a href="{{ route('tenant',$property->id) }}" class="nav_btn2 apply_rent">Apply for rent</a>
        
     </div>
 </div>
