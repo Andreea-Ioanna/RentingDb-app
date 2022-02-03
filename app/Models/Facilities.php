@@ -12,6 +12,11 @@ class Facilities extends Model
      * @var string
      */
     protected $table = 'facilities';
+
+    protected $fillable = [
+        'propertyId','airConditioning','internet','cableTv','petAllowed','createdAt','updatedAt' 
+     ];
+
     const CREATED_AT = 'createdAt';
     const UPDATED_AT = 'updatedAt';
 }

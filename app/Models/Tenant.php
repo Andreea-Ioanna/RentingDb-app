@@ -12,6 +12,9 @@ class Tenant extends Model
      * @var string
      */
     protected $table = 'tenant';
+    protected $fillable = [
+        'propertyId','firstName','lastName','email','job','description','photo','createdAt','updatedAt' 
+     ];
     const CREATED_AT = 'createdAt';
     const UPDATED_AT = 'updatedAt';
 }
