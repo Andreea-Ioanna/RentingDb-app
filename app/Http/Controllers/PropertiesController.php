@@ -84,7 +84,7 @@ class PropertiesController extends Controller
         ]);
     }
     public function allPropertiesDashboard(){
-        //properties from welcome
+        //properties from dasboard
         return view('dashboard', [
             'properties' => Properties::where('active',1)->get()
         ]);

@@ -23,7 +23,12 @@ class TenantController extends Controller
             ## sa trimiti propertyId din property in tenant
             ## se putea face cu modal
             'propertyId' => $propertyId,
-            'firstName' => $request->firstName
+            'firstName' => $request->firstName,
+            'lastName' => $request->lastName,
+            'email' => $request->email,
+            'job' => $request->job,
+            'description' => $request->description,
+            'photo' => $request->photo,
         ]);
         return redirect()->route('property', ['id' => $propertyId]);
     }

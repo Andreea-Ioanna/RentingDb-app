@@ -17,19 +17,25 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
+        <div class="guest_nav">
+    <div class="shrink-0 flex items-center">
+                    <a href="{{ route('dashboard') }}">
+                        <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                    </a>
+    </div>
     @if (Route::has('login'))
-        <div class="fixed top-0 right-0 px-6 py-4 sm:block">
+        <div>
             @auth
-            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+            <a href="{{ url('/dashboard') }}" class="">Dashboard</a>
             @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
+            <a href="{{ route('login') }}" class="login_nav">Log in</a>
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+            <a href="{{ route('register') }}" class="register_nav">Register</a>
             @endif
             @endauth
         </div>
         @endif
+        </div>
         <div class="font-sans text-gray-900 antialiased">
             
             {{ $slot }}
