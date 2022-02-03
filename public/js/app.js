@@ -5481,6 +5481,13 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 
+window.showPage = function (pageId) {
+  document.querySelectorAll('.subpage').forEach(function (item) {
+    item.style.display = "none";
+  });
+  document.getElementById(pageId).style.display = "block";
+};
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -5490,11 +5497,16 @@ alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+
+try {
+  __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+} catch (e) {}
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
+
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

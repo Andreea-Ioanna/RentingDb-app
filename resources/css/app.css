@@ -28,7 +28,7 @@
 #header{
     background: url("/assets/image.jpg") no-repeat center center;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 50vh;
     background-size: cover;
 }
 
@@ -62,7 +62,7 @@ p{
     border-radius: 0.5rem;
 }
 
-form{
+.search{
     display:grid;
     grid-template-columns: 4fr 1fr;
     /* border: 1px solid grey; */
@@ -117,7 +117,7 @@ input:focus{
 .underline{
     width: 5em;
     height: 4px;
-    background: #f1654d;
+    background: #f59a8a;
 }
 
 .categories_options{
@@ -137,15 +137,27 @@ input:focus{
     justify-content: space-evenly;
     padding: 1em;
     box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px;
+}
 
+.options:hover {
+    background-color:#f1654d ;
 }
 
 .options p {
     font-size: 1.3em;
-   
 }
 
+h2{
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
+h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
 
 #sponsored{
     
@@ -350,6 +362,7 @@ textarea{
 }
 
 .availability{
+
    display: flex;   
    flex-direction: column;
    text-align: center;
@@ -445,3 +458,111 @@ border-bottom: 1px solid black;
     display:none;
 }
 
+.properties_container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5em;
+    grid-row-gap: 2em;
+}
+
+.property_template{
+    margin-top: 1em;
+}
+
+.property_template > p:nth-child(2){
+    visibility: hidden;
+}
+
+.property_image {
+    width: 100%;
+}
+
+.property_header{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    height: 50%;
+}
+
+.property_header img{
+    width: 100%;
+}
+
+.propertyPage_main {
+    display:grid;
+    grid-template-columns: 1fr;
+    width: 50%;
+    margin:auto;
+
+}
+
+.propertyPage_main h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin-top:1em;
+}
+
+.landlord_header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.add_property_form{
+    width: 60%;
+    margin: auto;
+    margin-top: 3em;   
+}
+
+.property_id {
+    display:none;
+}
+
+.form_titles{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+
+.landlord_profile_main{
+    width: 100%;
+}
+
+.priceLandlord{
+    font-size: .5em;
+}
+
+.landlord_property_layout{
+    position: relative;
+    padding: 1em;
+    margin-top: 1.5em;
+    background-color: white;
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items:center;
+    grid-column-gap: 1em;
+}
+
+.landlord_property_buttons {
+   position: absolute;
+   right: 1em;
+   bottom: 1em;
+   display: flex;
+   width: 20%;
+   justify-content: space-around;
+}
+
+.bin {
+    position: absolute;
+    bottom: 6em;
+    right: 1em;
+}
+
+.vertical_line{
+    border-left: 2px solid gray;
+    width: 2px;
+}
+
+.property_btn:hover{
+border-bottom: 2px solid #f1654d ;
+}

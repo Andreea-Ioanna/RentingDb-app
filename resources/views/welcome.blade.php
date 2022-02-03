@@ -8,7 +8,7 @@
             <div id="search">
                 <h1>Welcome to ...</h1>
                 <h3>Find the best appratments</h3>
-                <form>
+                <form class="search">
                     <input name="search" type="text" placeholder="Where would you like to move?">
                     <button class="search_btn">Search</button>
                 </form>
@@ -23,19 +23,19 @@
             </div>
             <div class="categories_options">
                 <div class="options">
-                    <img src="images/single-bed.png" alt="single room">
+                    <img src="/assets/single-bed.png" alt="single room">
                     <p>Single rooms</p>
                 </div>
                 <div class="options">
-                    <img src="images/buildings.png" alt="appartments">
+                    <img src="/assets/buildings.png" alt="appartments">
                     <p>Appartments</p>
                 </div>
                 <div class="options">
-                    <img src="images/buildings.png" alt="appartments">
+                    <img src="/assets/buildings.png" alt="appartments">
                     <p>Houses</p>
                 </div>
                 <div class="options">
-                    <img src="images/buildings.png" alt="appartments">
+                    <img src="/assets/buildings.png" alt="appartments">
                     <p>Others</p>
                 </div>
                 <div>
@@ -43,20 +43,23 @@
                 </div>
             </div>
             <div class="mostPopular">
-                <h2>All properties</h2>
+                <h2>New properties</h2>
                 <div class="underline"></div>
+                <div class="properties_container">
                 @foreach ($properties as $property)
 
-                <div class="">
-                    <p>Property id: {{ $property->id }}</p>
-                    <p>Property description: {{ $property->description }}</p>
-                    <p>Property price: {{ $property->price }}</p>
+                <div class="property_template">
+                    <img class="property_image" src="/assets/img.jpg">
+                    <p class="property_id">Property id: {{ $property->id }}</p>
+                    <p class="price">{{ $property->price }} kr.-</p>
+                    <p>{{ $property->description }}</p>
+                    <p>{{ $property->area }}</p>
+                    <p>{{ $property->address }}</p>
                     <p><a class="nav_btn1" style="color:black" href="{{ route('property',$property->id ) }}">View property</a></p>
                 </div>
-                <br>
+               
 
                 @endforeach
-                <div id="sponsored">
                 </div>
             </div>
 

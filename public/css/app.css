@@ -624,6 +624,9 @@ select {
 .-ml-px {
   margin-left: -1px;
 }
+.ml-4 {
+  margin-left: 1rem;
+}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -638,9 +641,6 @@ select {
 }
 .mt-4 {
   margin-top: 1rem;
-}
-.ml-4 {
-  margin-left: 1rem;
 }
 .mt-8 {
   margin-top: 2rem;
@@ -902,13 +902,13 @@ select {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .py-1 {
   padding-top: 0.25rem;
@@ -1139,7 +1139,7 @@ body {
 #header{
     background: url("/assets/image.jpg") no-repeat center center;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 50vh;
     background-size: cover;
 }
 .nav_s2{
@@ -1168,7 +1168,7 @@ p{
     background: #f1654d;  
     border-radius: 0.5rem;
 }
-form{
+.search{
     display:grid;
     grid-template-columns: 4fr 1fr;
     /* border: 1px solid grey; */
@@ -1216,7 +1216,7 @@ input:focus{
 .underline{
     width: 5em;
     height: 4px;
-    background: #f1654d;
+    background: #f59a8a;
 }
 .categories_options{
     margin-top: 1em;
@@ -1234,11 +1234,22 @@ input:focus{
     justify-content: space-evenly;
     padding: 1em;
     box-shadow: rgb(0 0 0 / 10%) 0px 0px 15px;
-
+}
+.options:hover {
+    background-color:#f1654d ;
 }
 .options p {
     font-size: 1.3em;
-   
+}
+h2{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h3{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
 }
 #sponsored{
     
@@ -1409,6 +1420,7 @@ textarea{
     grid-template-columns: 1fr 1fr 1fr;
 }
 .availability{
+
    display: flex;   
    flex-direction: column;
    text-align: center;
@@ -1485,6 +1497,96 @@ border-bottom: 1px solid black;
 }
 #appointments {
     display:none;
+}
+.properties_container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5em;
+    grid-row-gap: 2em;
+}
+.property_template{
+    margin-top: 1em;
+}
+.property_template > p:nth-child(2){
+    visibility: hidden;
+}
+.property_image {
+    width: 100%;
+}
+.property_header{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    height: 50%;
+}
+.property_header img{
+    width: 100%;
+}
+.propertyPage_main {
+    display:grid;
+    grid-template-columns: 1fr;
+    width: 50%;
+    margin:auto;
+
+}
+.propertyPage_main h2 {
+    font-weight: 700;
+    font-size: 32px;
+    margin-top:1em;
+}
+.landlord_header{
+    display: flex;
+    justify-content: space-between;
+}
+.add_property_form{
+    width: 60%;
+    margin: auto;
+    margin-top: 3em;   
+}
+.property_id {
+    display:none;
+}
+.form_titles{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
+}
+.landlord_profile_main{
+    width: 100%;
+}
+.priceLandlord{
+    font-size: .5em;
+}
+.landlord_property_layout{
+    position: relative;
+    padding: 1em;
+    margin-top: 1.5em;
+    background-color: white;
+    display:grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    align-items:center;
+    grid-column-gap: 1em;
+}
+.landlord_property_buttons {
+   position: absolute;
+   right: 1em;
+   bottom: 1em;
+   display: flex;
+   width: 20%;
+   justify-content: space-around;
+}
+.bin {
+    position: absolute;
+    bottom: 6em;
+    right: 1em;
+}
+.vertical_line{
+    border-left: 2px solid gray;
+    width: 2px;
+}
+.property_btn:hover{
+border-bottom: 2px solid #f1654d ;
 }
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
@@ -1614,6 +1716,11 @@ border-bottom: 1px solid black;
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
+
+  .dark\:text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+  }
 }
 @media (min-width: 640px) {
 
@@ -1628,6 +1735,10 @@ border-bottom: 1px solid black;
 
   .sm\:ml-6 {
     margin-left: 1.5rem;
+  }
+
+  .sm\:block {
+    display: block;
   }
 
   .sm\:flex {
@@ -1682,5 +1793,3 @@ border-bottom: 1px solid black;
     padding-right: 2rem;
   }
 }
-
-
