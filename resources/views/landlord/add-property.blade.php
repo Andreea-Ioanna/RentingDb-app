@@ -37,6 +37,13 @@
                 <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
             </div>
 
+              <!-- Address -->
+              <div>
+                <x-label for="address" :value="__('address')" />
+
+                <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
+            </div>
+
           
 
             <div class="flex items-center justify-end mt-4">
