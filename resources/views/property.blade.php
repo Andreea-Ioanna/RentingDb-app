@@ -22,7 +22,7 @@
             </ul>
             <ul>
                 <li>Rooms</li>
-                <li>2</li>
+                <p>{{$property->rooms}}</p>
             </ul>
             <ul>
                 <li>Energy label</li>
@@ -48,7 +48,7 @@
         <div class="column1">
             <ul>
                 <li>Size</li>
-                <li>94 m2</li>
+                <p>{{$property->area}} m2</p>
             </ul>
             <ul>
                 <li>Floor</li>
@@ -85,11 +85,11 @@
             </ul>
             <ul>
                 <li>Occupancy price</li>
-                <li>60.400, -</li>
+                <p>{{$property->deposit}}, -</p>
             </ul>
             <ul>
                 <li>Available from</li>
-                <li>December 15, 2021</li>
+                <p>{{$property->available}}</p>
             </ul>
         </div>
         <div class="column1">
@@ -110,8 +110,10 @@
     </div>
     <div class="availability">
         <p class="monthly_price">Monthly price</p>
-        <p class="price">6,300 kr</p>
-        <p>Available: 26/12/2021</p>
+        <!-- <p class="price">6,300 kr</p> -->
+        <p class="price">{{$property->price}}</p>
+        <p>{{$property->available}}</p>
+        <!-- <p>Available: 26/12/2021</p> -->
         <a href="{{ route('tenant',$property->id) }}" class="nav_btn2 apply_rent">Apply for rent</a>
        
     </div>
