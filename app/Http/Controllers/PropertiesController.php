@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Properties;
+use App\Models\Tenant;
 use Illuminate\Support\Facades\Auth;
 
 class PropertiesController extends Controller
@@ -88,6 +89,13 @@ class PropertiesController extends Controller
         //properties from dasboard
         return view('dashboard', [
             'properties' => Properties::where('active',1)->get()
+        ]);
+    }
+
+    public function getTenantsApplications($id){
+        $applications = Tenant::where('propertyId', $id)->get();
+        return view('landlord.application', [
+            'applications' => $applications
         ]);
     }
 }

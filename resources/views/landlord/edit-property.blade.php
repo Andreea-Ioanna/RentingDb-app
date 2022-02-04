@@ -2,7 +2,7 @@
     <div class="landlord_profile_container">
         <h1 class="welcome">Welcome {{ Auth::user()->name }}</h1>
         <div class="underline"></div>
-        <h2>Edit property {{$property->id}}</h2>
+        <h2>Edit property - {{$property->title}}</h2>
     </div>
         <x-slot name="logo">
             <a href="/">
@@ -17,6 +17,21 @@
             @csrf
             @method('PUT')
 
+       
+            <!-- Title -->
+            <div>
+                <x-label for="title" :value="__('title')" />
+
+                <x-input id="title" class="block mt-1 w-full" value="{{ $property->title }}" type="text" name="title" required autofocus />
+            </div>
+        <br>
+         <!-- Rooms -->
+         <div>
+                <x-label for="rooms" :value="__('rooms')" />
+
+                <x-input id="rooms" class="block mt-1 w-full" value="{{ $property->rooms }}" type="text" name="rooms" required autofocus />
+            </div>
+        <br>
             <!-- Description -->
             <div>
                 <x-label for="description" :value="__('description')" />
@@ -24,13 +39,20 @@
                 <textarea id="description" class="block mt-1 w-full" type="text" name="description" required autofocus />{{ $property->description }}</textarea>
             </div>
         <br>
-             <!-- Price -->
+             <!-- Title -->
              <div>
-                <x-label for="price" :value="__('price')" />
+                <x-label for="title" :value="__('title')" />
 
-                <x-input id="price" class="block mt-1 w-full" type="text" name="price" value="{{ $property->price }}" required />
+                <x-input id="title" class="block mt-1 w-full" value="{{ $property->title }}" type="text" name="title" required autofocus />
             </div>
-<br>
+        <br>
+         <!-- Deposit -->
+         <div>
+                <x-label for="deposit" :value="__('deposit')" />
+
+                <x-input id="deposit" class="block mt-1 w-full" value="{{ $property->deposit }}" type="text" name="deposit" required autofocus />
+            </div>
+        <br>
              <!-- Address -->
              <div>
                 <x-label for="address" :value="__('address')" />

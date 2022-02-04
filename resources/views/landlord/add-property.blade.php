@@ -15,7 +15,7 @@
         @csrf
   <!-- Price -->
   <div>
-            <x-label for="title" :value="__('Title of the proeprty')" class="form_titles"/>
+            <x-label for="title" :value="__('Title of the property')" class="form_titles"/>
             <div class="underline"></div>
             <x-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title')" required />
         </div>
@@ -53,20 +53,20 @@
                 required />
         </div>
           <!-- Latitude -->
-          <div>
+          <!-- <div>
             <x-label for="latitude" :value="__('Latitude')"  class="form_titles"/>
             <div class="underline"></div>
             <x-input id="latitude" class="block mt-1 w-full" type="number" name="latitude" :value="old('latitude')" 
                 required />
-        </div>
+        </div> -->
 
          <!-- longitude -->
-         <div>
+         <!-- <div>
             <x-label for="longitude" :value="__('Longitude')"  class="form_titles"/>
             <div class="underline"></div>
             <x-input id="longitude" class="block mt-1 w-full" type="number" name="longitude" :value="old('longitude')" 
                 required />
-        </div>
+        </div> -->
 
         <!-- Rooms -->
         <div>

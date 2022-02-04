@@ -81,7 +81,7 @@
             </ul>
             <ul>
                 <li>Monthly rent</li>
-                <li>14.900, -</li>
+                <p>{{$property->price}}, -</p>
             </ul>
             <ul>
                 <li>Occupancy price</li>
