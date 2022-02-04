@@ -502,6 +502,7 @@ border-bottom: 1px solid black;
 .landlord_header{
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid gray;
 }
 
 .add_property_form{
@@ -600,4 +601,26 @@ border-bottom: 2px solid #f1654d ;
 
 .pleasefill {
     margin-top: .5em;
+}
+
+.user_header{
+    display:flex;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.user_header img {
+    width: 5em;
+    margin-right: 2em;
+}
+
+.appointments_container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.appointments_container img {
+    width: 10em;
 }
