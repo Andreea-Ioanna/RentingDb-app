@@ -11,7 +11,7 @@
 
         <div class="lanlord_main">
             <div class="landlord_properties">
-                <h3>Here you can see your appointments</h3>
+                <h3>Here you can see your tenant applications</h3>
                 <div class="underline"></div>
                 @if($applications->isEmpty())
                 <div class="appointments_container">
