@@ -41,6 +41,7 @@ class PropertiesController extends Controller
             'utilities' => $request->utilities,
             'period' => $request->period,
             'type' => $request->type,
+            'title' =>$request->title
         ]);
         return redirect()->action([PropertiesController::class, 'myProperties']);
 

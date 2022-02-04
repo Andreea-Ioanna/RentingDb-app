@@ -13,7 +13,13 @@
 
     <form class="add_property_form" method="POST" action="{{ route('post-property') }}">
         @csrf
-
+  <!-- Price -->
+  <div>
+            <x-label for="title" :value="__('Title of the proeprty')" class="form_titles"/>
+            <div class="underline"></div>
+            <x-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title')" required />
+        </div>
+        <br>
         <!-- Description -->
         <div>
             <x-label for="description" :value="__('Description')" class="form_titles" />
@@ -30,6 +36,7 @@
             <x-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price')" required />
         </div>
         <br>
+      
         <!-- Address -->
         <div>
             <x-label for="address" :value="__('Address')" class="form_titles" />

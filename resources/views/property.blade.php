@@ -7,7 +7,7 @@
         </div>
         <div class="border_bottom"></div>
         <div class="propertyPage_main">
-            <h2>3 bedroom appartment of 97 m2</h2>
+            <h2>{{$property->title}}</h2>
             <p>{{$property->address}}</p>
             <h3>Description</h3>
             <div class="underline"></div>
