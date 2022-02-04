@@ -91,6 +91,7 @@
 
                     <div class="property_template">
                         <img class="property_image" src="/assets/img.jpg">
+                        <p>{{ $property->title }}</p>
                         <p class="property_id">Property id: {{ $property->id }}</p>
                         <p class="price">{{ $property->price }} kr.-</p>
                         <p>{{ $property->description }}</p>
