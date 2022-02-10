@@ -12,21 +12,26 @@
                     <p class="price priceLandlord">{{ $property->price }} kr.-</p>
                     <p><b>{{ $property->title }}</b></p>
                     <p>{{ $property->address }}</p>
-                     
+
                 </div>
                 <div class="landlord_property_buttons">
-                <img class="bin" src="/assets/bin.png" alt="">
-                <p><a class="property_btn" style="color:black" href="{{ route('edit-property',$property->id) }}">Edit
+                    <img class="bin" src="/assets/bin.png" alt="">
+                    <p><a class="property_btn" style="color:black;margin-right:20px;" href="{{ route('edit-property',$property->id) }}">Edit
                             property</a>
                     </p>
                     <div class="vertical_line"></div>
-                <p><a class="property_btn" style="color:black" href="{{ route('property',$property->id ) }}">View
+                    <p><a class="property_btn" style="color:black;margin-right:20px;" href="{{ route('property',$property->id ) }}">View
                             property</a></p>
-                            </div>
-            </div>
+                    <div class="vertical_line"></div>
+                    <p><a class="property_btn" style="color:black;" href="{{ route('application',$property->id ) }}">View
+                            applicants</a></p>
+                </div>
 
-            @endforeach
+            </div>
         </div>
+
+        @endforeach
+    </div>
     </div>
 
 

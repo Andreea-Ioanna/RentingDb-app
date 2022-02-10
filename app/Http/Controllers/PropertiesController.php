@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Properties;
+use App\Models\Tenant;
 use Illuminate\Support\Facades\Auth;
 
 class PropertiesController extends Controller
@@ -93,6 +94,12 @@ class PropertiesController extends Controller
 
     public function searchProperty(){
         $search_proeprty = $_GET['search_query'];
-        $property = Properties::where('address', 'LIKE', '%'.$search_proeprty.'%')->get();
+        $property = Properties::where('address', 'LIKE', '%'.$search_proeprty.'%')->get(); 
+    }
+    public function getTenantsApplications($id){
+        $applications = Tenant::where('propertyId', $id)->get();
+        return view('landlord.application', [
+            'applications' => $applications
+        ]);
     }
 }

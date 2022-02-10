@@ -20,9 +20,8 @@ Route::get('/', [PropertiesController::class, 'allProperties']);
 Route::get('/dashboard', [PropertiesController::class, 'allPropertiesDashboard'])
     ->middleware(['auth'])->name('dashboard');
 
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
+Route::get('/application/{id}', [PropertiesController::class, 'getTenantsApplications'])
+    ->middleware(['auth'])->name('application');
 
 Route::get('/profile', function () {
     return view('profile');
