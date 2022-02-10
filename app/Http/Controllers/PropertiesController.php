@@ -90,4 +90,9 @@ class PropertiesController extends Controller
             'properties' => Properties::where('active',1)->get()
         ]);
     }
+
+    public function searchProperty(){
+        $search_proeprty = $_GET['search_query'];
+        $property = Properties::where('address', 'LIKE', '%'.$search_proeprty.'%')->get();
+    }
 }

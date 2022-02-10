@@ -2,6 +2,10 @@
 
 
     <div id="dashboard">
+        <form class="search_dashboard" type="get" action="{{ url('/search') }}">
+            <input class="search_input" name="search_query" placeholder="Search">
+            <button class="search_btn" type="submit">Search</button>
+        </form>
         <div class="dashboard_containers">
             <div class="filter">
                 <h6>Housing Type</h6>

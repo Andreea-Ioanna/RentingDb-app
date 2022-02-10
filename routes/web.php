@@ -54,6 +54,8 @@ Route::get('/tenant/{id}', [TenantController::class, 'viewForm'])
 Route::post('/tenant-application/{propertyId}', [TenantController::class, 'createForm'])
     ->name('tenant-application');
 
+Route::get('/search', [PropertiesController::class, 'searchProperty'])
+    ->name('search');
 
 
 require __DIR__ . '/auth.php';
