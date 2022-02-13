@@ -546,7 +546,6 @@ border-bottom: 1px solid black;
    right: 1em;
    bottom: 1em;
    display: flex;
-   width: 20%;
    justify-content: space-around;
 }
 

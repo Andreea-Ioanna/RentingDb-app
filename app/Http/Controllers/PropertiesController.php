@@ -96,10 +96,18 @@ class PropertiesController extends Controller
         $search_proeprty = $_GET['search_query'];
         $property = Properties::where('address', 'LIKE', '%'.$search_proeprty.'%')->get(); 
     }
+
+    public function deleteProperty($id){
+        $proeprty = Properties::find($id)->delete();
+      
+        return redirect('my-properties');
+    }
+
     public function getTenantsApplications($id){
         $applications = Tenant::where('propertyId', $id)->get();
         return view('landlord.application', [
             'applications' => $applications
         ]);
     }
+    
 }
