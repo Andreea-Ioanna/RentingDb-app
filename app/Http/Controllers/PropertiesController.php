@@ -98,7 +98,7 @@ class PropertiesController extends Controller
     }
 
     public function deleteProperty($id){
-        $proeprty = Properties::find($id)->delete();
+        $property = Properties::find($id)->delete();
       
         return redirect('my-properties');
     }

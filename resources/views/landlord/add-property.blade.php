@@ -13,9 +13,9 @@
 
     <form class="add_property_form" method="POST" action="{{ route('post-property') }}">
         @csrf
-  <!-- Price -->
-  <div>
-            <x-label for="title" :value="__('Title of the property')" class="form_titles"/>
+        <!-- Price -->
+        <div>
+            <x-label for="title" :value="__('Title of the property')" class="form_titles" />
             <div class="underline"></div>
             <x-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title')" required />
         </div>
@@ -25,43 +25,40 @@
             <x-label for="description" :value="__('Description')" class="form_titles" />
             <div class="underline"></div>
 
-            <textarea id="description" class="block mt-1 w-full" type="text" name="description"
-                :value="old('description')" required autofocus></textarea>
+            <textarea id="description" class="block mt-1 w-full" type="text" name="description" :value="old('description')" required autofocus></textarea>
         </div>
         <br>
         <!-- Price -->
         <div>
-            <x-label for="price" :value="__('Price')" class="form_titles"/>
+            <x-label for="price" :value="__('Price')" class="form_titles" />
             <div class="underline"></div>
             <x-input id="price" class="block mt-1 w-full" type="number" name="price" :value="old('price')" required />
         </div>
         <br>
-      
+
         <!-- Address -->
         <div>
             <x-label for="address" :value="__('Address')" class="form_titles" />
             <div class="underline"></div>
-            <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"
-                required />
+            <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
         </div>
 
         <!-- Area -->
         <div>
-            <x-label for="area" :value="__('Area')"  class="form_titles"/>
+            <x-label for="area" :value="__('Area')" class="form_titles" />
             <div class="underline"></div>
-            <x-input id="area" class="block mt-1 w-full" type="text" name="area" :value="old('area')"
-                required />
+            <x-input id="area" class="block mt-1 w-full" type="text" name="area" :value="old('area')" required />
         </div>
-          <!-- Latitude -->
-          <!-- <div>
+        <!-- Latitude -->
+        <!-- <div>
             <x-label for="latitude" :value="__('Latitude')"  class="form_titles"/>
             <div class="underline"></div>
             <x-input id="latitude" class="block mt-1 w-full" type="number" name="latitude" :value="old('latitude')" 
                 required />
         </div> -->
 
-         <!-- longitude -->
-         <!-- <div>
+        <!-- longitude -->
+        <!-- <div>
             <x-label for="longitude" :value="__('Longitude')"  class="form_titles"/>
             <div class="underline"></div>
             <x-input id="longitude" class="block mt-1 w-full" type="number" name="longitude" :value="old('longitude')" 
@@ -70,36 +67,37 @@
 
         <!-- Rooms -->
         <div>
-            <x-label for="rooms" :value="__('Rooms')"  class="form_titles"/>
+            <x-label for="rooms" :value="__('Rooms')" class="form_titles" />
             <div class="underline"></div>
-            <x-input id="rooms" class="block mt-1 w-full" type="number" name="area" :value="old('rooms')"
-                required />
+            <x-input id="rooms" class="block mt-1 w-full" type="number" name="area" :value="old('rooms')" required />
         </div>
         <!-- Deposit -->
         <div>
-            <x-label for="deposit" :value="__('Deposit')"  class="form_titles"/>
+            <x-label for="deposit" :value="__('Deposit')" class="form_titles" />
             <div class="underline"></div>
-            <x-input id="deposit" class="block mt-1 w-full" type="number" name="deposit" :value="old('rooms')" placeholder="kr"
-                required />
+            <x-input id="deposit" class="block mt-1 w-full" type="number" name="deposit" :value="old('rooms')" placeholder="kr" required />
         </div>
         <!-- Utilities -->
         <div>
-            <x-label for="utilities" :value="__('Utilities')"  class="form_titles"/>
+            <x-label for="utilities" :value="__('Utilities')" class="form_titles" />
             <div class="underline"></div>
-            <x-input id="utilities" class="block mt-1 w-full" type="number" name="utilities" :value="old('utilities')" 
-                required />
+            <x-input id="utilities" class="block mt-1 w-full" type="number" name="utilities" :value="old('utilities')" required />
         </div>
-      
-        <!-- type -->
-        <div>
-            <x-label for="type" :value="__('Type')"  class="form_titles"/>
-            <div class="underline"></div>
-            <x-input id="type" class="block mt-1 w-full" type="number" name="type" :value="old('type')" 
-                required />
-        </div>
-      
-      
+
        
+
+        <div>
+        <x-label for="type" :value="__('Type')" class="form_titles" />
+        <div class="underline"></div>
+            <select id="type" class="block mt-1 w-full" aria-label="Default select example" name="type">
+                <option selected>Select property type</option>
+                <option value="1">Apartment</option>
+                <option value="2">House</option>
+                <option value="3">Room</option>
+            </select>
+        </div>
+
+
 
 
 
