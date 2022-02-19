@@ -15,7 +15,7 @@
 
                 </div>
                 <div class="landlord_property_buttons">
-                    <a href={{"delete/".$property['id']}}><img class="bin" src="/assets/bin.png" alt=""></a>
+                    <a href="{{route('delete-property',['id' => $property->id ])}}"><img class="bin" src="/assets/bin.png" alt=""></a>
                     <p><a class="property_btn" style="color:black;margin-right:20px;" href="{{ route('edit-property',$property->id) }}">Edit
                             property</a>
                     </p>

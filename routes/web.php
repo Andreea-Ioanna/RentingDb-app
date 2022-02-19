@@ -56,6 +56,7 @@ Route::post('/tenant-application/{propertyId}', [TenantController::class, 'creat
 Route::get('/search', [PropertiesController::class, 'searchProperty'])
     ->name('search');
 
-Route::get('/delete/{id}', [PropertiesController::class, 'deleteProperty']);
+Route::get('/delete/{id}', [PropertiesController::class, 'deleteProperty'])
+    ->name('delete-property');
 
 require __DIR__ . '/auth.php';
